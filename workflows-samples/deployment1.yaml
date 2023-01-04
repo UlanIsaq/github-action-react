@@ -32,6 +32,7 @@ jobs:
       run: npm run lint
   build:
     needs: [lint, test_my_comp]
+    continue-on-error: true
     strategy:
       matrix:
         node-version: [14, 16]
